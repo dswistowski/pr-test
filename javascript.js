@@ -35,8 +35,7 @@ function renderArticle(articleData, articleNode) {
 function loadArticles(section) {
     $("body").addClass("loading").addClass("article-view");
 
-    let url = `https://api.nytimes.com/svc/topstories/v2/${section}.json`;
-    url += "?" + $.param({
+    const url = `https://api.nytimes.com/svc/topstories/v2/${section}.json` + $.param({
         "api-key": API_KEY
     });
 
